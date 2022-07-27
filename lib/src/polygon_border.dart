@@ -35,7 +35,7 @@ class PolygonBorder extends OutlinedBorder {
     this.turn = 0,
     this.borderAlign = BorderAlign.inside,
     super.side,
-  }) : assert(radius >= 0);
+  });
 
   /// The polygon.
   final Polygon polygon;

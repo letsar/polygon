@@ -48,6 +48,7 @@ class _PlaygroundPageState extends State<PlaygroundPage> {
     );
 
     return Scaffold(
+      appBar: AppBar(title: const Text('Playground')),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
