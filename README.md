@@ -1,6 +1,6 @@
 # polygon
 
-Create any polygon easily in Flutter with this package !
+Create any polygon easily in Flutter with this package!
 
 [![Pub](https://img.shields.io/pub/v/polygon.svg)][pub]
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QTT34M25RDNL6)
@@ -9,10 +9,10 @@ https://user-images.githubusercontent.com/9378033/181354646-63d1d8aa-315e-4ef4-8
 
 ## Features
 
-- Creates regular convex polygons.
-- Creates regular star polygons.
-- Creates a polygon border.
-- Clips any widget with a polygon shape.
+- Create regular convex polygons.
+- Create regular star polygons.
+- Create a polygon border.
+- Clip any widget with a polygon shape.
 
 ## Usage
 
@@ -58,7 +58,7 @@ class PolygonPainter extends CustomPainter {
 
 ![sharp](https://user-images.githubusercontent.com/9378033/181352814-e23eacc8-0268-404c-bf8b-35099a74004b.png)
 
-The `computePath` methods accepts various parameters and you can for example apply a corder radius to all of the polygon's corners:
+The `computePath` methods accepts various parameters and you can, for example apply a corner radius to all of the polygon's corners:
 
 ![rounded](https://user-images.githubusercontent.com/9378033/181352844-61bf3814-3902-4605-913d-9597b9cf4ff5.png)
 
