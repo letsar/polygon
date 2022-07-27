@@ -5,6 +5,8 @@ Create any polygon easily in Flutter with this package !
 [![Pub](https://img.shields.io/pub/v/polygon.svg)][pub]
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QTT34M25RDNL6)
 
+https://user-images.githubusercontent.com/9378033/181354646-63d1d8aa-315e-4ef4-8ff3-e5c3a15341bb.mov
+
 ## Features
 
 - Creates regular convex polygons.
@@ -32,6 +34,7 @@ const polygon = Polygon([
 You can then create a path from this polygon by using its `computePath` method.
 For example you can use it in a `CustomPainter`:
 
+
 ```dart
 class PolygonPainter extends CustomPainter {
   PolygonPainter(this.polygon);
@@ -53,7 +56,11 @@ class PolygonPainter extends CustomPainter {
 }
 ```
 
+![sharp](https://user-images.githubusercontent.com/9378033/181352814-e23eacc8-0268-404c-bf8b-35099a74004b.png)
+
 The `computePath` methods accepts various parameters and you can for example apply a corder radius to all of the polygon's corners:
+
+![rounded](https://user-images.githubusercontent.com/9378033/181352844-61bf3814-3902-4605-913d-9597b9cf4ff5.png)
 
 ### PolygonBorder
 
@@ -87,7 +94,7 @@ This package comes with two specialized polygons:
 A `RegularConvexPolygon` which can create triangles, tetragons, pentagons, etc.
 A `RegularStarPolygon` which can create various star shapes.
 
-// VIDEO OF PLAYGROUND
+https://user-images.githubusercontent.com/9378033/181354589-1c12b68b-2ecc-4ded-a46b-16fe03d6cd57.mov
 
 ## Sponsoring
 
