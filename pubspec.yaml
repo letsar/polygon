@@ -1,6 +1,6 @@
 name: polygon
-description: A simple way to draw polygon shapes, to clip them.
-version: 0.0.1
+description: A simple way to draw polygon shapes and to clip them.
+version: 0.1.0
 homepage: https://github.com/letsar/polygon
 repository: https://github.com/letsar/polygon
 issue_tracker: https://github.com/letsar/polygon/issues
