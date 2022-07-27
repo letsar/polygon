@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:polygon/src/corner_path_effect.dart';
 import 'package:polygon/src/polygon.dart';
@@ -76,6 +78,36 @@ class PolygonBorder extends OutlinedBorder {
   }
 
   @override
+  ShapeBorder? lerpFrom(ShapeBorder? a, double t) {
+    if (a is PolygonBorder) {
+      return PolygonBorder(
+        polygon: polygon,
+        borderAlign: borderAlign,
+        cornerPathEffect: cornerPathEffect,
+        radius: lerpDouble(a.radius, radius, t) ?? 0,
+        side: BorderSide.lerp(a.side, side, t),
+        turn: lerpDouble(a.turn, turn, t) ?? 0,
+      );
+    }
+    return super.lerpFrom(a, t);
+  }
+
+  @override
+  ShapeBorder? lerpTo(ShapeBorder? b, double t) {
+    if (b is PolygonBorder) {
+      return PolygonBorder(
+        polygon: polygon,
+        borderAlign: borderAlign,
+        cornerPathEffect: cornerPathEffect,
+        radius: lerpDouble(radius, b.radius, t) ?? 0,
+        side: BorderSide.lerp(side, b.side, t),
+        turn: lerpDouble(turn, b.turn, t) ?? 0,
+      );
+    }
+    return super.lerpTo(b, t);
+  }
+
+  @override
   Path getInnerPath(Rect rect, {TextDirection? textDirection}) {
     final delta = () {
       switch (borderAlign) {
@@ -145,4 +177,27 @@ class PolygonBorder extends OutlinedBorder {
       side: side ?? this.side,
     );
   }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other.runtimeType != runtimeType) return false;
+    return other is PolygonBorder &&
+        other.borderAlign == borderAlign &&
+        other.cornerPathEffect == cornerPathEffect &&
+        other.polygon == polygon &&
+        other.radius == radius &&
+        other.turn == turn &&
+        other.side == side;
+  }
+
+  @override
+  int get hashCode => Object.hashAll([
+        borderAlign,
+        cornerPathEffect,
+        polygon,
+        radius,
+        turn,
+        side,
+      ]);
 }

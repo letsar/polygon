@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 import 'dart:ui';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/painting.dart';
 import 'package:polygon/src/corner_path_effect.dart';
 import 'package:vector_math/vector_math_64.dart';
@@ -103,6 +104,16 @@ class RegularStarPolygon extends Polygon {
     }
     return result;
   }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other.runtimeType != runtimeType) return false;
+    return other is Polygon && listEquals<Offset>(other.vertices, vertices);
+  }
+
+  @override
+  int get hashCode => Object.hashAll(vertices);
 }
 
 extension on List<Offset> {
